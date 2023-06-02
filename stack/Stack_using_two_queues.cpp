@@ -110,3 +110,14 @@ int QueueStack::pop()
     return poppedElement;
 }
 
+// Explanation:
+
+// In the push function, we simply push the given element (x) onto the q1 queue.
+// In the pop function, we handle two cases:
+// If q1 is empty, it means the stack is empty, so we return -1.
+// We move all elements from q1 to q2 except the last one. This is done by popping elements from q1 and pushing them into q2. The last element in q1 will be the top of the stack.
+// After popping the last element from q1, we store it as poppedElement.
+// To maintain the order of elements, we swap the names of q1 and q2. Now q2 becomes empty, and the next push operation will happen on q1 as usual.
+// Finally, we return poppedElement.
+// By using these two queues, we can effectively implement a stack with the desired functionality.
+
